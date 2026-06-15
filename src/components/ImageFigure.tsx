@@ -28,7 +28,9 @@ export default function ImageFigure({
     const dialog = dialogRef.current;
     if (!dialog) return;
 
-    const handleClose = () => { triggerRef.current?.focus(); };
+    const handleClose = () => {
+      triggerRef.current?.focus();
+    };
     dialog.addEventListener("close", handleClose);
     return () => dialog.removeEventListener("close", handleClose);
   }, []);
@@ -55,13 +57,28 @@ export default function ImageFigure({
             ref={triggerRef}
             onClick={openLightbox}
             aria-label={`View full size: ${alt}`}
-            style={{ display: "block", width: "100%", padding: 0, border: "none", background: "none", cursor: "zoom-in", outline: "none" }}
+            style={{
+              display: "block",
+              width: "100%",
+              padding: 0,
+              border: "none",
+              background: "none",
+              cursor: "zoom-in",
+              outline: "none",
+            }}
           >
             <img src={src} alt={alt} style={imgStyle} />
           </button>
         )}
         {caption && (
-          <figcaption style={{ marginTop: 10, fontSize: 13, color: "var(--ink-3)", lineHeight: 1.5 }}>
+          <figcaption
+            style={{
+              marginTop: 10,
+              fontSize: 13,
+              color: "var(--ink-3)",
+              lineHeight: 1.5,
+            }}
+          >
             {caption}
           </figcaption>
         )}
@@ -71,12 +88,24 @@ export default function ImageFigure({
         <dialog
           ref={dialogRef}
           onClick={handleBackdropClick}
-          style={{ padding: 0, border: "none", background: "transparent", maxWidth: "92vw", maxHeight: "90vh" }}
+          style={{
+            padding: 0,
+            border: "none",
+            background: "transparent",
+            maxWidth: "92vw",
+            maxHeight: "90vh",
+          }}
         >
           <img
             src={src}
             alt={alt}
-            style={{ display: "block", maxWidth: "92vw", maxHeight: "90vh", objectFit: "contain", borderRadius: 8 }}
+            style={{
+              display: "block",
+              maxWidth: "92vw",
+              maxHeight: "90vh",
+              objectFit: "contain",
+              borderRadius: 8,
+            }}
           />
         </dialog>
       )}

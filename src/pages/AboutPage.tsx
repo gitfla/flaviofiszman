@@ -7,28 +7,83 @@ export default function AboutPage(): JSX.Element {
     <>
       <Nav />
       <div className="route-fade">
-        <header style={{ maxWidth: "var(--content-max)", margin: "0 auto", padding: "80px var(--pad-inner) 48px" }}>
-          <Link to="/" className="link-arrow" style={{ fontSize: 13, color: "var(--ink-3)", borderBottom: 0, paddingBottom: 0 }}>
-            <span className="arr" style={{ display: "inline-block", transform: "rotate(180deg)" }}>→</span>{" "}
+        <header
+          style={{
+            maxWidth: "var(--content-max)",
+            margin: "0 auto",
+            padding: "80px var(--pad-inner) 48px",
+          }}
+        >
+          <Link
+            to="/"
+            className="link-arrow"
+            style={{
+              fontSize: 13,
+              color: "var(--ink-3)",
+              borderBottom: 0,
+              paddingBottom: 0,
+            }}
+          >
+            <span
+              className="arr"
+              style={{ display: "inline-block", transform: "rotate(180deg)" }}
+            >
+              →
+            </span>{" "}
             Back to work
           </Link>
 
-          <span className="eyebrow" style={{ color: "var(--accent)", display: "block", marginTop: 36 }}>About</span>
+          <span
+            className="eyebrow"
+            style={{ color: "var(--accent)", display: "block", marginTop: 36 }}
+          >
+            About
+          </span>
 
-          <h1 className="h-display" style={{ fontSize: "clamp(36px, 4.8vw, 60px)", margin: "16px 0 0", maxWidth: "16ch" }}>
+          <h1
+            className="h-display"
+            style={{
+              fontSize: "clamp(36px, 4.8vw, 60px)",
+              margin: "16px 0 0",
+              maxWidth: "16ch",
+            }}
+          >
             Flavio Fiszman
           </h1>
         </header>
 
-        <main className="about-sidebar-layout" style={{ maxWidth: "var(--content-max)", margin: "0 auto", padding: "0 var(--pad-inner) 120px" }}>
+        <main
+          className="about-sidebar-layout"
+          style={{
+            maxWidth: "var(--content-max)",
+            margin: "0 auto",
+            padding: "0 var(--pad-inner) 120px",
+          }}
+        >
           <aside>
-            <img src="/flavio.png" alt="Flavio Fiszman" className="sidebar-photo"
-              style={{ width: "100%", display: "block", aspectRatio: "3 / 4", objectFit: "cover", objectPosition: "center 15%", border: "1px solid var(--rule)", marginBottom: 28 }}
+            <img
+              src="/flavio.png"
+              alt="Flavio Fiszman"
+              className="sidebar-photo"
+              style={{
+                width: "100%",
+                display: "block",
+                aspectRatio: "1 / 1",
+                objectFit: "cover",
+                objectPosition: "center 35%",
+                border: "1px solid var(--rule)",
+                marginBottom: 28,
+                borderRadius: "50%",
+              }}
             />
 
             <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
               <span className="eyebrow">Email</span>
-              <a href="mailto:flaviofiszman@gmail.com" className="link-arrow" style={{ fontSize: 12 }}>
+              <a
+                href="mailto:flaviofiszman@gmail.com"
+                className="link-arrow"
+                style={{ fontSize: 12 }}
+              >
                 flaviofiszman@gmail.com <span className="arr">→</span>
               </a>
             </div>
@@ -76,12 +131,11 @@ export default function AboutPage(): JSX.Element {
 
               <h3>Client work (2022–present)</h3>
               <p>
-                Mobile apps, APIs, and web for clients across consumer, creative,
-                and enterprise. Backend and cloud as the anchor; end-to-end when
-                the project calls for it. Also CS teaching.
+                Mobile apps, APIs, and web for clients across consumer,
+                creative, and enterprise. Backend and cloud as the anchor;
+                end-to-end when the project calls for it. Also CS teaching.
               </p>
             </div>
-
           </div>
         </main>
 

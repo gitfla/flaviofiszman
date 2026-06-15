@@ -11,7 +11,8 @@ function useScrollTo() {
     const scroll = () => {
       const el = document.getElementById(anchor);
       if (el) {
-        const navHeight = document.querySelector("nav")?.getBoundingClientRect().height ?? 0;
+        const navHeight =
+          document.querySelector("nav")?.getBoundingClientRect().height ?? 0;
         const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
         window.scrollTo({ top, behavior: "smooth" });
       }
@@ -31,7 +32,9 @@ export default function Nav(): JSX.Element {
   const [open, setOpen] = useState(false);
   const location = useLocation();
 
-  useEffect(() => { setOpen(false); }, [location.pathname]);
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
 
   const links = [
     { label: "Work", anchor: "work" },
@@ -61,17 +64,46 @@ export default function Nav(): JSX.Element {
           justifyContent: "space-between",
         }}
       >
-        <a href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none", color: "inherit" }}>
-          <span style={{ fontFamily: "var(--sans)", fontSize: 15, fontWeight: 500, letterSpacing: "-0.005em", color: "var(--ink)" }}>
+        <a
+          href="/"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
+            textDecoration: "none",
+            color: "inherit",
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "var(--sans)",
+              fontSize: 15,
+              fontWeight: 500,
+              letterSpacing: "-0.005em",
+              color: "var(--ink)",
+            }}
+          >
             Flavio Fiszman
           </span>
         </a>
 
         {/* Desktop nav links */}
         {!isMobile && (
-          <div style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: 32 }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              gap: 32,
+            }}
+          >
             {links.map((l) => (
-              <a key={l.label} href={`/#${l.anchor}`} className="nav-link" onClick={scrollTo(l.anchor)}>
+              <a
+                key={l.label}
+                href={`/#${l.anchor}`}
+                className="nav-link"
+                onClick={scrollTo(l.anchor)}
+              >
                 {l.label}
               </a>
             ))}
@@ -119,7 +151,10 @@ export default function Nav(): JSX.Element {
               href={`/#${l.anchor}`}
               className="nav-link"
               style={{ fontSize: 15 }}
-              onClick={(e) => { scrollTo(l.anchor)(e); setOpen(false); }}
+              onClick={(e) => {
+                scrollTo(l.anchor)(e);
+                setOpen(false);
+              }}
             >
               {l.label}
             </a>

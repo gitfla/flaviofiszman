@@ -50,7 +50,6 @@ export default function Footer(): JSX.Element {
         >
           © 2026 Flavio Fiszman
         </span>
-
       </div>
 
       <style>{`
