@@ -55,7 +55,7 @@ export default function ImageFigure({
             ref={triggerRef}
             onClick={openLightbox}
             aria-label={`View full size: ${alt}`}
-            style={{ display: "block", width: "100%", padding: 0, border: "none", background: "none", cursor: "zoom-in" }}
+            style={{ display: "block", width: "100%", padding: 0, border: "none", background: "none", cursor: "zoom-in", outline: "none" }}
           >
             <img src={src} alt={alt} style={imgStyle} />
           </button>
