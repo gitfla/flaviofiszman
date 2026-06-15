@@ -88,7 +88,6 @@ export const projects: Project[] = [
       },
       { kind: "h", text: "Outcome" },
       {
-        kind: "p",
         kind: "p-link",
         text: "Shipped as part of Android 12, available on Pixel and beyond. Got coverage in ",
         linkText: "9to5Google",
