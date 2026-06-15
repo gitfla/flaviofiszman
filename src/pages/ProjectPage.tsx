@@ -175,6 +175,10 @@ const SECONDARY_IMAGES: Record<string, SecondaryImage[]> = {
   "kaggle-search-migration": [
     { src: "/projects/kaggle/access.svg", alt: "Kaggle search — access control logic diagram" },
   ],
+  "serve": [
+    { src: "/projects/serve/serve-select.png", alt: "Serve — writer selection" },
+    { src: "/projects/serve/serve-chat.png",   alt: "Serve — conversation view" },
+  ],
   "pleasure-states": [
     { src: "/projects/pleasure-states/splash-screen-2.jpeg", alt: "Pleasure States — splash screen variant" },
     { src: "/projects/pleasure-states/what-we-do.jpeg",      alt: "Pleasure States — what we do section" },

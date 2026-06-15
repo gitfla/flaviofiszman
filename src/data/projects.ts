@@ -32,7 +32,7 @@ export const projects: Project[] = [
       { kind: "h", text: "Hardest part" },
       {
         kind: "p",
-        text: "The real risk wasn\u2019t returning private content to the right user. It was making sure it never appeared to the wrong one. Permissions change constantly: content gets unshared, group membership changes, datasets flip visibility. The system had to reconcile search latency, index freshness, and correctness under edge cases. I designed it to fail closed (when in doubt, don\u2019t return the result) and built the pipeline to propagate permission changes fast rather than relying on periodic re-indexing.",
+        text: "The real risk was making sure private content never appeared to the wrong user. Permissions change constantly: content gets unshared, group membership changes, datasets flip visibility. The system had to reconcile search latency, index freshness, and correctness under edge cases. I designed it to fail closed (when in doubt, don\u2019t return the result) and built the pipeline to propagate permission changes fast rather than relying on periodic re-indexing.",
       },
       { kind: "h", text: "Outcome" },
       {
@@ -138,11 +138,11 @@ export const projects: Project[] = [
       { kind: "h", text: "Design decisions" },
       {
         kind: "p",
-        text: "Two choices shaped this project. The first was the platform. FlutterFlow + Firebase let me ship the whole thing solo on the budget and timeline available. A custom React Native or Flutter app would have been technically cleaner but wouldn\u2019t have shipped on time. The fact that the app is still in production a year later is the evidence that the call was right.",
+        text: "FlutterFlow + Firebase let me ship the whole thing solo within the budget and timeline. A custom Flutter app would have been technically cleaner but wouldn\u2019t have shipped on time. The app being in production a year later is evidence enough that the call was right.",
       },
       {
         kind: "p",
-        text: "The second was where to put the budget logic. FlutterFlow can express simple formulas inline, but the pricing rules had real complexity: multiple inputs, formula-driven, needs to be auditable when something looks wrong. I put it in Cloud Functions instead, which kept the business logic in version-controlled, testable code outside the low-code surface. When the rules needed to change later, it was a code review rather than a click-through.",
+        text: "The budget logic went into Cloud Functions rather than inline FlutterFlow formulas. The pricing rules had real complexity and needed to be auditable. Keeping that in version-controlled code outside the low-code surface meant that when the rules changed, it was a code review rather than a click-through.",
       },
       { kind: "h", text: "Outcome" },
       {
@@ -235,7 +235,7 @@ export const projects: Project[] = [
       { kind: "h", text: "Context" },
       {
         kind: "p",
-        text: "Pleasure States is the studio of a New York-based art director. The brief wasn\u2019t a marketing site. It was closer to a digital installation: cinematic fullscreen sections, video and motion as primary content, scroll behavior treated as part of the choreography rather than just a way to move through the page. I worked directly with the art director and a visual designer across multiple feedback rounds, built the whole thing in custom HTML/CSS/JS, and deployed it on Vercel.",
+        text: "Pleasure States is the studio of a New York-based art director. The brief was closer to a digital installation than a marketing site: cinematic fullscreen sections, video and motion as primary content, scroll behavior treated as part of the choreography rather than just a way to move through the page. I worked directly with the art director and a visual designer across multiple feedback rounds, built the whole thing in custom HTML/CSS/JS, and deployed it on Vercel.",
       },
       { kind: "h", text: "What I built" },
       {
@@ -249,11 +249,11 @@ export const projects: Project[] = [
       { kind: "h", text: "What made it interesting" },
       {
         kind: "p",
-        text: "The real work on a project like this is bridging an artistic vision and a site that actually has to function. The visual designer was strong on aesthetics, and I ended up being the de facto UX voice, thinking through what happens on the first tap, the third, the tenth, where intent and usability sometimes pulled in different directions.",
+        text: "The visual designer was strong on aesthetics; I ended up thinking through what happens on the first tap, the third, the tenth, where intent and usability pulled in different directions.",
       },
       {
         kind: "p",
-        text: "The most interesting decisions came in the middle of the build, when ambitious early ideas met working code. Some held up beautifully and shipped; others we adjusted together once we could see them in motion. That back-and-forth \u2014 holding the artistic intent and the practical experience as equally real constraints \u2014 is the part of creative-tech work I find most rewarding.",
+        text: "The most interesting decisions came in the middle of the build, when ambitious early ideas met working code. Some held up beautifully and shipped; others we adjusted together once we could see them in motion. That back-and-forth, holding the artistic intent and the practical experience as equally real constraints, is the part of creative-tech work I find most rewarding.",
       },
       { kind: "h", text: "Outcome" },
       {
